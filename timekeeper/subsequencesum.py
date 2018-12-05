@@ -12,18 +12,6 @@ def subsequencesum(sampleArr, targetSum):
                 break
     return False
 
-# if __name__ == '__main__':
-#     res = subsequencesum([10,3,1,7],8)
-#     print (res)
-#     res = subsequencesum([10,3,1,7],10)
-#     print (res)
-#     res = subsequencesum([10,3,1,7],21)
-#     print (res)
-#     res = subsequencesum([10,3,1,7],22)
-#     print (res)
-#     res = subsequencesum([10,3,1,7],17)
-#     print (res)
-
 def calcTime(codeToRun, codeToSetup, repeat):
     res = timeit.repeat(stmt = codeToRun, setup = codeToSetup, number = 1, repeat = repeat)
     sum = 0

@@ -5,13 +5,13 @@ def mechacoach(sampleArr):
     for i in range(0,len(sampleArr)-1):
         for j in range (i+1, len(sampleArr)):
             resArr.append([sampleArr[i],sampleArr[j]])
-    print("resultarr")
-    print(resArr)
+    # print("resultarr")
+    # print(resArr)
     return resArr
 
 if __name__ == '__main__':
-    #arrSizes = list(range(5000,100000,5000))
-    arrSizes = [5]#,20,40]
+    arrSizes = list(range(5000,100000,5000))
+    #arrSizes = [5]#,20,40]
     repetitions = 10
     codeToSetup = '''
 import random
