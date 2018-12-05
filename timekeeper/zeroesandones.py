@@ -16,19 +16,20 @@ def zeroesandones(sampleArr):
     return sampleArr
 
 if __name__ == '__main__':
-    arrSizes = list(range(5000,100000,5000))
+    arrSizes = list(range(5000,100000,10000))
     #arrSizes = [5,20,40]
     repetitions = 2
-    codeToSetup = '''
+
+    for size in arrSizes:
+        codeToSetup = '''
 import random
 from zeroesandones import zeroesandones
-'''
-    for size in arrSizes:
+testArr = random.choices([0,1],k={})
+'''.format(size)
         print("Now running zeroesandones with {}".format(size))
         codeToRun = '''
-testArr = random.choices([0,1],k={})
 zeroesandones(testArr)
-'''.format(size)
+'''
         res = calcTime(codeToRun, codeToSetup,repetitions)
         with open('''timekeeper/resultfiles/zeroesandones.csv''', "a") as myfile:
             myfile.write("{},     {},     {}\n".format("zeroesandones()",size,res))

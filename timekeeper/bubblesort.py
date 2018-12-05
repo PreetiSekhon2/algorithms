@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 from timekeeper import calcTime
 
 def bubbleSort(sampleArr):
@@ -12,19 +13,20 @@ def bubbleSort(sampleArr):
     return sampleArr
 
 if __name__ == '__main__':
-    arrSizes = list(range(5000,100000,5000))
+    arrSizes = list(range(5000,100000,10000))
     #arrSizes = [5,20,40]
     repetitions = 2
-    codeToSetup = '''
+
+    for size in arrSizes:
+        codeToSetup = '''
 import time, timeit, random
 from bubblesort import bubbleSort
-'''
-    for size in arrSizes:
+testArr = random.sample(range(1, 100000), {})
+'''.format(size)
         print("Now running bubblesort with {}".format(size))
         codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 bubbleSort(testArr)
-'''.format(size)
+'''
         res = calcTime(codeToRun, codeToSetup,repetitions)
         with open('''timekeeper/resultfiles/bubbleSort.csv''', "a") as myfile:
             myfile.write("{},     {},     {}\n".format("bubbleSort()",size,res))

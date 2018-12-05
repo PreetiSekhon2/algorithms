@@ -5,33 +5,32 @@ if __name__ == '__main__':
     #arrSizes = [5,20,40]
     repetitions = 2
     functiontorunstrings = ['reverse', 'sort', 'shuffle', 'last']
-    codeToSetup = '''
+
+    for functionname in functiontorunstrings:
+
+        codeToSetup = '''
 import time, timeit, random
 from random import shuffle
-'''
-    for functionname in functiontorunstrings:
+testArr = random.sample(range(1, 100000), {})
+'''.format(size)
 
         for size in arrSizes:
             if (functionname == "reverse"):
                 codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 testArr.reverse()
-'''.format(size)
+'''
             elif (functionname == "sort"):
                 codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 testArr.sort()
-'''.format(size)
+'''
             elif (functionname == "shuffle"):
                 codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 shuffle(testArr)
-'''.format(size)
+'''
             elif (functionname == "last"):
                 codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 testArr[-1]
-'''.format(size)
+'''
             res = calcTime(codeToRun, codeToSetup,repetitions)
             with open("testpythoninbuilt.csv", "a") as myfile:
                 myfile.write("{},     {},     {}\n".format(functionname,size,res))

@@ -16,20 +16,20 @@
 # chmod 755 timekeeper/timekeeper.py
 
 #> timekeeper/resultfiles/bubblesort.csv
-#timekeeper/bubblesort.py &&
-> timekeeper/resultfiles/duplicates.csv &&
-timekeeper/duplicates.py &&
-> timekeeper/resultfiles/mechacoach.csv &&
-timekeeper/mechacoach.py &&
-> timekeeper/resultfiles/mostfrequentwords.csv &&
-timekeeper/mostfrequentwords.py &&
-> timekeeper/resultfiles/reversearray.csv &&
-timekeeper/reversearray.py &&
-> timekeeper/resultfiles/selectionsort.csv &&
-timekeeper/selectionsort.py &&
-> timekeeper/resultfiles/subsequencesum.csv &&
-timekeeper/subsequencesum.py &&
-> timekeeper/resultfiles/testpythoninbuilt.csv &&
-timekeeper/testpythoninbuilt.py &&
-> timekeeper/resultfiles/zeroesandones.csv &&
-timekeeper/zeroesandones.py &&
+#./timekeeper/bubblesort.py &&
+# > timekeeper/resultfiles/duplicates.csv
+# python timekeeper/duplicates.py
+> timekeeper/resultfiles/mechacoach.csv
+python timekeeper/mechacoach.py
+# > timekeeper/resultfiles/mostfrequentwords.csv &&
+# ./timekeeper/mostfrequentwords.py &&
+# > timekeeper/resultfiles/reversearray.csv
+# python timekeeper/reversearray.py
+> timekeeper/resultfiles/selectionsort.csv
+python timekeeper/selectionsort.py
+# > timekeeper/resultfiles/subsequencesum.csv
+# python timekeeper/subsequencesum.py
+# > timekeeper/resultfiles/testpythoninbuilt.csv
+# python timekeeper/testpythoninbuilt.py
+# > timekeeper/resultfiles/zeroesandones.csv
+# python timekeeper/zeroesandones.py

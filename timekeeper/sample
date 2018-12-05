@@ -1,0 +1,21 @@
+angular
+ajax
+hibernate
+MariaDB in GAIA
+ORM - hibernate
+feeds from Verum
+REST API / swagger interface to read and written
+
+we exposing API for planum; we may push data into Planum.
+GET/ position
+
+UI angular
+
+swagger (view layer) for gui/API
+
+selenium use swagger
+
+JAVA / springboot - easier for swagger.
+calcs - python - these are services.
+
+KRAS engine for ML

@@ -15,19 +15,20 @@ def reverseArray(testArr):
     return testArr
 
 if __name__ == '__main__':
-    arrSizes = list(range(5000,100000,5000))
+    arrSizes = list(range(5000,100000,10000))
     #arrSizes = [5]#,20,40]
     repetitions = 2
-    codeToSetup = '''
+
+    for size in arrSizes:
+        codeToSetup = '''
 import time, timeit, random
 from reversearray import reverseArray
-'''
-    for size in arrSizes:
+testArr = random.sample(range(1, 100000), {})
+'''.format(size)
         print("Now running reverseArray with {}".format(size))
         codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 reverseArray(testArr)
-'''.format(size)
+'''
         res = calcTime(codeToRun, codeToSetup,repetitions)
         with open('''timekeeper/resultfiles/reverseArray.csv''', "a") as myfile:
             myfile.write("{},     {},     {}\n".format("reverseArray()",size,res))

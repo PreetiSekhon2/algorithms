@@ -10,19 +10,20 @@ def mechacoach(sampleArr):
     return resArr
 
 if __name__ == '__main__':
-    arrSizes = list(range(5000,100000,5000))
+    arrSizes = list(range(5000,50000,5000))
     #arrSizes = [5]#,20,40]
-    repetitions = 2
-    codeToSetup = '''
+    repetitions = 1
+
+    for size in arrSizes:
+        codeToSetup = '''
 import random
 from mechacoach import mechacoach
-'''
-    for size in arrSizes:
+testArr = random.sample(range(1, 100000), {})
+'''.format(size)
         print("Now running mechacoach with {}".format(size))
         codeToRun = '''
-testArr = random.sample(range(1, 100000), {})
 mechacoach(testArr)
-'''.format(size)
+'''
         res = calcTime(codeToRun, codeToSetup,repetitions)
         with open('''timekeeper/resultfiles/mechacoach.csv''', "a") as myfile:
             myfile.write("{},     {},     {}\n".format("mechacoach()",size,res))
