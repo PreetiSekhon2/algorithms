@@ -3,7 +3,7 @@ from timekeeper import calcTime
 if __name__ == '__main__':
     arrSizes = list(range(5000,100000,5000))
     #arrSizes = [5,20,40]
-    repetitions = 10
+    repetitions = 2
     functiontorunstrings = ['reverse', 'sort', 'shuffle', 'last']
     codeToSetup = '''
 import time, timeit, random
