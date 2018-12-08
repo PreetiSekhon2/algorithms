@@ -15,21 +15,23 @@
 # chmod 755 timekeeper/zeroesandones.py
 # chmod 755 timekeeper/timekeeper.py
 
-#> timekeeper/resultfiles/bubblesort.csv
-#./timekeeper/bubblesort.py &&
+> timekeeper/resultfiles/bubblesort.csv
+python timekeeper/bubblesort.py 
 # > timekeeper/resultfiles/duplicates.csv
-# python timekeeper/duplicates.py
-> timekeeper/resultfiles/mechacoach.csv
-python timekeeper/mechacoach.py
+#  python timekeeper/duplicates.py
+# > timekeeper/resultfiles/mechacoach.csv
+# python timekeeper/mechacoach.py
 # > timekeeper/resultfiles/mostfrequentwords.csv &&
 # ./timekeeper/mostfrequentwords.py &&
-# > timekeeper/resultfiles/reversearray.csv
-# python timekeeper/reversearray.py
-> timekeeper/resultfiles/selectionsort.csv
-python timekeeper/selectionsort.py
-# > timekeeper/resultfiles/subsequencesum.csv
-# python timekeeper/subsequencesum.py
+ # > timekeeper/resultfiles/reversearray.csv
+ # python timekeeper/reversearray.py
+ > timekeeper/resultfiles/selectionsort.csv
+ python timekeeper/selectionsort.py
+ > timekeeper/resultfiles/radixSort.csv
+ python timekeeper/radixsort.py
+ # > timekeeper/resultfiles/subsequencesum.csv
+ # python timekeeper/subsequencesum.py
 # > timekeeper/resultfiles/testpythoninbuilt.csv
 # python timekeeper/testpythoninbuilt.py
-# > timekeeper/resultfiles/zeroesandones.csv
-# python timekeeper/zeroesandones.py
+ # > timekeeper/resultfiles/zeroesandones.csv
+ # python timekeeper/zeroesandones.py

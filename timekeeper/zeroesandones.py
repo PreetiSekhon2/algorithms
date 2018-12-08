@@ -1,3 +1,6 @@
+#!/Users/preetiudas/.pyenv/shims/python3.7
+
+
 from timekeeper import calcTime
 
 def zeroesandones(sampleArr):

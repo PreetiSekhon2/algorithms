@@ -1,2 +1,4 @@
 timekeeper/resultfiles/*
+timekeeper/resultfiles_old/*
+
 *.csv

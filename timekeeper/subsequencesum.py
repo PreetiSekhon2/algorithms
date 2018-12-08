@@ -1,3 +1,5 @@
+#!/Users/preetiudas/.pyenv/shims/python3.7
+
 import time, timeit, random
 
 def subsequencesum(sampleArr, targetSum):
@@ -23,7 +25,7 @@ def calcTime(codeToRun, codeToSetup, repeat):
 if __name__ == '__main__':
     arrSizes = list(range(5000,100000,10000))
     #arrSizes = [5,20,40]
-    repetitions = 2
+    repetitions = 10
 
     for size in arrSizes:
         codeToSetup = '''

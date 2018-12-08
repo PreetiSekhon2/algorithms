@@ -1,3 +1,5 @@
+#!/Users/preetiudas/.pyenv/shims/python3.7
+
 from timekeeper import calcTime
 
 def mechacoach(sampleArr):
@@ -10,7 +12,7 @@ def mechacoach(sampleArr):
     return resArr
 
 if __name__ == '__main__':
-    arrSizes = list(range(5000,50000,5000))
+    arrSizes = list(range(5000,100000,10000))
     #arrSizes = [5]#,20,40]
     repetitions = 1
 
